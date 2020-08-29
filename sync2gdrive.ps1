@@ -1,6 +1,6 @@
 $dir = "$HOME/Documents/rclone-test"
+$path = "googleDrive:backup"
 
-# Set-Location $dir
 Write-Output "sync folder $dir to gdrive"
 
-rclone.exe copy $dir googleDrive:backup --progress -vvvvv --log-file "$HOME/Documents/rclone.log"
+rclone.exe sync $dir $path --progress -vvvvv --log-file "$HOME/Documents/rclone.log"
